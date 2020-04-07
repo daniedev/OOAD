@@ -1,9 +1,6 @@
 package ricksguitarapp.guitar;
 
-import ricksguitarapp.guitarspec.Builder;
 import ricksguitarapp.guitarspec.GuitarSpec;
-import ricksguitarapp.guitarspec.Type;
-import ricksguitarapp.guitarspec.Wood;
 
 public class Guitar {
 
@@ -12,11 +9,10 @@ public class Guitar {
     GuitarSpec spec;
 
     public Guitar(String serialNumber, double price,
-                  Builder builder, String model, Type type,
-                  Wood backWood, Wood topWood) {
+                  GuitarSpec spec) {
         this.serialNumber = serialNumber;
         this.price = price;
-        this.spec = new GuitarSpec(builder, model, type, backWood, topWood);
+        this.spec = spec;
     }
 
     public String getSerialNumber() {
